@@ -32,6 +32,7 @@ body {
 display: grid;
 grid-template-columns: 1fr 1fr;
 text-align: center;
+box-sizing: border-box;
 }
 .section img {
     width: 100%;
@@ -40,27 +41,35 @@ text-align: center;
     }
 .card {
     margin: 10px;
-    height: 750px;
-    padding: 0;
-    border: groove red;
     background-color: red;
-    border-radius: 20px;
-    border-width: 10px;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    
+    
+}
+.card-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    color: black;
+    
 
 }
 
 
-#btn {
+.btn {
     background-color: rgb(255, 255, 255);
     color: red;
     font-size: 30px;
     border: solid red;
 border-radius: 15px;
 margin-bottom: 50px;
-
+cursor: pointer;
+box-shadow: 0 20px 30px 0 rgb(0, 0, 0);
 }
 
-#btn:hover {
+.btn:hover {
     background-color: rgb(138, 138, 138);
 }
 
@@ -102,4 +111,22 @@ margin-bottom: 60px;
  text-align: center;
  font-size: 30px;
  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif\;
+}
+
+.card:hover {
+    z-index: 1;
+    box-shadow: 0 20px 30px 0 rgb(0, 0, 0);
+    scale: 1.02;
+}
+
+.cursor {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card:hover>.btn {
+    background-color: rgb(61, 61, 61);
+}
+.footer {
+    margin-top: 20px;
 }
